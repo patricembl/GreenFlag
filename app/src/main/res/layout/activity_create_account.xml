@@ -1,0 +1,277 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/backs"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:padding="12dp"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:text="Create an account"
+                android:textColor="@color/white"
+                android:textSize="22dp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <TextView
+            android:id="@+id/email_add"
+            android:layout_width="314dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/email_address"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <RelativeLayout
+            android:layout_width="314dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/edit_email"
+                android:layout_width="314dp"
+                android:layout_height="55dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageView
+                android:id="@+id/emailok"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/check1"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/email_err"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:background="@drawable/reds_error_bg"
+            android:layout_width="314dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/ic"
+                android:src="@drawable/close"
+                android:layout_width="25dp"
+                android:layout_height="25dp"/>
+
+            <TextView
+                android:id="@+id/error_email_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/ic"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/create_pass"
+            android:layout_width="314dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/create_password"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/edit_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.184"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <RelativeLayout
+            android:layout_width="314dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/edit_pass"
+                android:layout_width="314dp"
+                android:layout_height="55dp"
+
+                android:background="@color/white"
+                android:ems="10"
+                android:hint="@string/see_criteria_below"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/grey" />
+
+            <ImageView
+                android:id="@+id/passok"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/check1"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/repeat_pass"
+            android:layout_width="314dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/repeat_password"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <RelativeLayout
+            android:layout_width="314dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+
+            <EditText
+                android:id="@+id/confirm_pass"
+                android:layout_width="314dp"
+                android:layout_height="55dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/grey" />
+
+            <ImageView
+                android:id="@+id/cpassok"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/check1"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/pass_err"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:background="@drawable/reds_error_bg"
+            android:layout_width="314dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/ic1"
+                android:src="@drawable/close"
+                android:layout_width="25dp"
+                android:layout_height="25dp"/>
+
+            <TextView
+                android:id="@+id/error_pass_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/ic1"
+                android:text="One of the passwords you entered wasn't valid"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+
+
+
+
+        <TextView
+            android:id="@+id/pass_criteria"
+            android:layout_width="314dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:hint=""
+            android:text="@string/pass_criteria"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+
+        <RelativeLayout
+            android:layout_width="308dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="308dp"
+                android:layout_height="58dp"
+                android:layout_marginBottom="92dp"
+                android:contentDescription="@string/next_btn"
+                app:srcCompat="@drawable/gradient_button_background" />
+
+            <TextView
+                android:id="@+id/next_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Next"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</ScrollView>

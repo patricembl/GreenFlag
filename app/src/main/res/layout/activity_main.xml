@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/req_rescue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="176dp"
+        android:text="@string/request_rescue"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/car_health" />
+
+    <TextView
+        android:id="@+id/car_health"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="208dp"
+        android:text="@string/car_health"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intro" />
+
+    <ImageView
+        android:id="@+id/green_chk_one"
+        android:layout_width="17dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/check_one"
+        android:src="@drawable/tick"
+        app:layout_constraintEnd_toStartOf="@+id/car_health"
+        app:layout_constraintHorizontal_bias="0.927"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intro" />
+
+    <ImageView
+        android:id="@+id/green_chk_three"
+        android:layout_width="17dp"
+        android:layout_height="19dp"
+        android:contentDescription="@string/check_one"
+        app:layout_constraintBottom_toTopOf="@+id/green_btn"
+        app:layout_constraintEnd_toStartOf="@+id/poly_info"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/green_chk_two"
+        app:layout_constraintVertical_bias="0.028"
+        android:src="@drawable/tick"/>
+
+    <ImageView
+        android:id="@+id/green_chk_two"
+        android:layout_width="17dp"
+        android:layout_height="19dp"
+        android:contentDescription="@string/check_one"
+        app:layout_constraintEnd_toStartOf="@+id/req_rescue"
+        app:layout_constraintHorizontal_bias="0.927"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/green_chk_one"
+        android:src="@drawable/tick"/>
+
+    <TextView
+        android:id="@+id/poly_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="212dp"
+        android:text="@string/poly_info"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/req_rescue" />
+
+    <ImageView
+        android:id="@+id/green_logo"
+        android:layout_width="281dp"
+        android:layout_height="111dp"
+        android:layout_marginTop="96dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/logo_green_flag" />
+
+    <TextView
+        android:id="@+id/intro"
+        android:layout_width="279dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/intro"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/green_logo" />
+
+    <ImageButton
+        android:id="@+id/green_btn"
+        android:layout_width="308dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="60dp"
+        android:contentDescription="@string/green_btn"
+        android:onClick="createAccountActivity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/gradient_button_background"/>
+
+    <TextView
+        android:id="@+id/create_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_an_account"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/green_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/green_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
